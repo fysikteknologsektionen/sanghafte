@@ -1,0 +1,16 @@
+\documentclass[12pt]{article}
+\usepackage[portrait,a4paper,margin=0cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[swedish]{babel}
+\usepackage{pdfpages}
+
+\begin{document}
+    %\includepdf[pages=-,nup=2x1]{print.pdf} % 1-2 sidor
+    %\includepdf[pages={{},1,2,3},nup=2x1]{print.pdf} % 3 sidor
+    \includepdf[pages={4,1,2,3},nup=2x1]{print.pdf} % 4 sidor
+    %\includepdf[pages={{},1,2,{},{},3,4,5},nup=2x1]{print.pdf} % 5 sidor
+    %\includepdf[pages={{},1,2,{},6,3,4,5},nup=2x1]{print.pdf} % 6 sidor
+    %\includepdf[pages={{},1,2,7,6,3,4,5},nup=2x1]{print.pdf} % 7 sidor
+    %\includepdf[pages={8,1,2,7,6,3,4,5},nup=2x1]{print.pdf} % 8 sidor
+\end{document}

@@ -1,0 +1,177 @@
+% ---------------- %%% FORMATERING %%% ----------------- %
+
+%% Import %%
+\documentclass[12pt]{article}
+\usepackage[paperwidth=105mm,paperheight=297mm,margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[swedish]{babel}
+\usepackage{amsmath}
+\usepackage{lmodern}
+\usepackage{units}
+\usepackage{icomma}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{hyperref}
+\pagenumbering{gobble}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{mathtools}
+\newcommand{\orientation}{\landskap}
+%% --- %%
+
+%% Section-format %%
+\setlength{\columnsep}{1.5cm}
+\titleformat
+{\section} % command
+[display] % shape
+{\bfseries\Large\itshape} % format
+{} % label
+{0em} % sep
+{\vspace{-0.5em}} % before-code
+[\vspace{0em}] % after-code
+\titlespacing{\section}{0em}{0em}{0.2em}
+\setlength{\parindent}{0cm}
+%% --- %%
+
+%% Titelformat %%
+\newcommand{\titelsida}
+{
+\begin{center}
+\includegraphics[width=\logga]{logo.png}~\\[0.75em]
+{ \Huge \titel \\[0.75em] }
+{\large Toastmasters: \host\\[0.5em]}
+{\large \datum\\\vspace{0.6em}}
+{\large Förrätt: \forratt\\\vspace{0.1em}}
+{\large Huvudrätt: \huvudratt\\\vspace{0.1em}}
+{\large Efterrätt: \efterratt\\\vspace{0.1em}}
+\end{center}
+}
+%% --- %%
+
+%% Sång %%
+\newcommand{\song}[1]{\input{./Texter/#1}}
+%% --- %%
+
+% -------------------------------------------------------- %
+
+
+
+
+% -------------- %%% EGNA INSTÄLLNINGAR %%% -------------- %
+
+%% Storlek på logga %%
+\newcommand{\logga}
+{0.8\textwidth}
+%% --- %%
+
+%% Titel %%
+\newcommand{\titel}
+{Titel}
+%% --- %%
+
+%% Värdar/Toastmasters %%
+\newcommand{\host}
+{Värd}
+%% --- %%
+
+%% Meny %%
+\newcommand{\forratt}
+{Förrätt}
+\newcommand{\huvudratt}
+{Huvudrätt}
+\newcommand{\efterratt}
+{Efterrätt}
+%% --- %%
+
+%% Datum %%
+\newcommand{\datum}
+{den \today}
+%% --- %%
+
+%% Melodirad %%
+
+% Inkludera melodirad (avkommentera det val du vill ha)
+\newcommand{\melodi}[1] {\textit{\small{Melodi: #1}}\vspace{0.2em}\\}
+
+% Exkludera melodirad (avkommentera det val du vill ha)
+%\newcommand{\melodi}[1]{} % Ingen melodirad
+
+%% --- %%
+
+%% Sånger %%
+\newcommand{\texter}{
+\song{livet.tex}
+\song{strejk-pa-pripps.tex}
+\song{vikingen.tex}
+\song{solen.tex}
+\song{masen.tex}
+\song{jag-har-aldrig-vart-pa-snusen.tex}
+\song{porthos-visa.tex}
+\song{spritbolaget.tex}
+\song{bordeaux-bordeaux.tex}
+\song{systeme-internationale.tex}
+\song{gamla-punschvisan.tex}
+\song{sista-punschvisan.tex}
+}
+%% --- %%
+
+
+%% Sånglista, går också att hitta i mappen Texter %%
+
+% Vill du lägga in en egen sång? Skicka ett mail till tralala@ftek.se
+
+% Bordeaux, Bordeaux - bordeaux-bordeaux.tex
+% Der er et yndigt land (Danmarks nationalsång) - der-er-et-yndigt-land.tex
+% Djungelpunsch - djungelpunsch.tex
+% Drick upp ölen - drick-upp-olen.tex
+% Du gamla du fria - du-gamla-du-fria.tex
+% FestU:s punschvisa - festus-punschvisa.tex
+% Feta fransyskor - feta-fransyskor.tex
+% Gamla punschvisan - gamla-punschvisan.tex
+% Halvan - halvan.tex
+% Helan går - helan-gar.tex
+% Hell and gore - hell-and-gore.tex
+% Ikväll är det fest - ikvall-ar-det-fest.tex
+% Ja, vi elsker (Norges nationalsång) - ja-vi-elsker.tex
+% Jag har aldrig var't på snusen - jag-har-aldrig-vart-pa-snusen.tex
+% Jag skall festa - jag-skall-festa.tex
+% Jävlaranammas sittningsvisa - javlaranammas.tex
+% Kalmarevisan - kalmarevisan.tex
+% Livet - livet.tex
+% Lovsång till snapsen - lovsang-till-snapsen.tex
+% Måsen - masen.tex
+% Mesen - mesen.tex
+% Moosen - moosen.tex
+% Musen - musen.tex
+% Månen - manen.tex
+% Mera brännvin - mera-brannvin.tex
+% Porthos visa - porthos-visa.tex
+% Punschvisa F - punschvisa-f.tex
+% Sista punschvisan - sista-punschvisan.tex
+% Solen - solen.tex
+% Spritbolaget - spritbolaget.tex
+% Strejk på Pripps - strejk-pa-pripps.tex
+% Studentsången - studentsangen.tex
+% Systeme Internationale - systeme-internationale.tex
+% Var är skålen? - var-ar-skalen.tex
+% Vi är alla Chalmerister - vi-ar-alla-chalmerister.tex
+% Vikingen - vikingen.tex
+% Vårt land (Finlands nationalsång) - vart-land.tex
+% Ärter och punch - arter-och-punch.tex
+
+
+%% --- %%
+
+% -------------------------------------------------------- %
+
+
+% ------------------- %%% DOKUMENT %%% ------------------- %
+
+\begin{document}
+\titelsida
+\texter
+\end{document}
+
+% -------------------------------------------------------- %
