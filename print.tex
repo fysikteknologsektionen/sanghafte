@@ -6,11 +6,49 @@
 \usepackage{pdfpages}
 
 \begin{document}
-    %\includepdf[pages=-,nup=2x1]{print.pdf} % 1-2 sidor
-    %\includepdf[pages={{},1,2,3},nup=2x1]{print.pdf} % 3 sidor
-    \includepdf[pages={4,1,2,3},nup=2x1]{print.pdf} % 4 sidor
-    %\includepdf[pages={{},1,2,{},{},3,4,5},nup=2x1]{print.pdf} % 5 sidor
-    %\includepdf[pages={{},1,2,{},6,3,4,5},nup=2x1]{print.pdf} % 6 sidor
-    %\includepdf[pages={{},1,2,7,6,3,4,5},nup=2x1]{print.pdf} % 7 sidor
-    %\includepdf[pages={8,1,2,7,6,3,4,5},nup=2x1]{print.pdf} % 8 sidor
+
+
+    % Instruktioner:
+    % 1. Se till att print.pdf finns
+    % 2. Kompilera
+    % 3. Ladda ner
+
+    % Kolla om print.pdf existerar
+    \IfFileExists{./print.pdf}{
+    
+    % Räkna antalet sidor
+    \pdfximage{print.pdf}
+    
+    % Väljer automatiskt rätt layout för antalet sidor
+    \ifnum\the\pdflastximagepages=1
+        \includepdf[pages=-,nup=2x1]{print.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=2
+        \includepdf[pages=-,nup=2x1]{print.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=3
+        \includepdf[pages={{},1,2,3},nup=2x1]{print.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=4
+        \includepdf[pages={4,1,2,3},nup=2x1]{print.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=5
+        \includepdf[pages={{},1,2,{},{},3,4,5},nup=2x1]{print.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=6
+        \includepdf[pages={{},1,2,{},6,3,4,5},nup=2x1]{print.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=7
+        \includepdf[pages={{},1,2,7,6,3,4,5},nup=2x1]{print.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=8
+        \includepdf[pages={8,1,2,7,6,3,4,5},nup=2x1]{print.pdf}
+    \fi
+    
+    }{
+    
+    % Varningsmeddelande
+    \noindent\Huge{Var vänlig kompilera main.tex och ladda upp PDF-filen med namnet \textbf{print.pdf}!}
+    
+    }
 \end{document}
