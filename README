@@ -2,6 +2,5 @@ Instruktioner:
 1. Ändra inställningarna i main.tex
 2. Lägg in dina låtar i ordning med \inputsong{}
 3. Lägg in \newpage om en rubrik fastnar på föregående sida
-4. Kompilera och ladda ner PDF.
-5. Döp om den till print.pdf och ladda upp så att den ligger bredvid print.tex (i root)
-6. Kompilera print.tex
+4. Kompilera!
+5. Skriv ut (dubbelsidigt längsmed långsidan)!
