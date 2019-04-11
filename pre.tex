@@ -15,6 +15,7 @@
 \usepackage{titlesec}
 \usepackage{mathtools}
 \newcommand{\orientation}{\landskap}
+\usepackage{etoolbox}
 %% --- %%
 
 %% Section-format %%
@@ -35,13 +36,13 @@
 \newcommand{\titelsida}
 {
 \begin{center}
-\includegraphics[width=\logga]{logo.png}~\\[0.75em]
-{ \Huge \titel \\[0.75em] }
-{\large Toastmasters: \host\\[0.5em]}
-{\large \datum\\\vspace{0.6em}}
-{\large Förrätt: \forratt\\\vspace{0.1em}}
-{\large Huvudrätt: \huvudratt\\\vspace{0.1em}}
-{\large Efterrätt: \efterratt\\\vspace{0.1em}}
+\IfFileExists{logo.png}{\includegraphics[width=\logga]{logo.png}~\\[0.75em]}{\vspace*{0.1\paperheight}}
+\expandafter\ifblank\expandafter{\titel}{}{ \Huge \titel \\[0.75em] }
+\expandafter\ifblank\expandafter{\host}{}{\large Toastmasters: \host\\[0.5em]}%
+\expandafter\ifblank\expandafter{\datum}{}{\large \datum\\\vspace{0.6em}}
+\expandafter\ifblank\expandafter{\forratt}{}{\large Förrätt: \forratt\\\vspace{0.1em}}
+\expandafter\ifblank\expandafter{\huvudratt}{}{\large Huvudrätt: \huvudratt\\\vspace{0.1em}}
+\expandafter\ifblank\expandafter{\efterratt}{}{\large Efterrätt: \efterratt\\\vspace{0.1em}}
 \end{center}
 }
 %% --- %%
