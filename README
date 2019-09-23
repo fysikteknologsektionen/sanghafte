@@ -1,9 +1,0 @@
-ShareLaTeX-fil: https://www.sharelatex.com/project/54e5b6820d375d1d1caa29fd
-ShareLaTeX-template: https://www.sharelatex.com/templates/593a8f86bb2a6a102a577f4c
-
-Instruktioner:
-1. Ändra inställningarna i main.tex
-2. Lägg in dina låtar i ordning med \inputsong{}
-3. Lägg in \newpage om en rubrik fastnar på föregående sida
-4. Kompilera!
-5. Skriv ut (dubbelsidigt längsmed långsidan)!
