@@ -1,3 +1,5 @@
+**OBS:** Detta projekt har flyttats till [fysikteknologsektionen/sanger](https://github.com/fysikteknologsektionen/sanger).
+
 # Skapa ditt eget sånghäfte
 
 1. Kopiera [Overleaf projektet](https://www.overleaf.com/read/vpxysyqrtmvs) till ditt Overleafkonto.
